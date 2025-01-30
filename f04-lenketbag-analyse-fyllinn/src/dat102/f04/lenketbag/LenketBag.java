@@ -35,7 +35,8 @@ public class LenketBag<T> implements BagADT<T> {
 
 	@Override
 	public int getCurrentSize() {
-		return antall; 
+		return antall;
+
 	}
 
 	@Override
@@ -54,6 +55,7 @@ public class LenketBag<T> implements BagADT<T> {
 
 	@Override
 	public T remove() {
+		//TODO
 		// Først sjekke om tom
 		if (forste == null) {
 			return null;
@@ -62,7 +64,8 @@ public class LenketBag<T> implements BagADT<T> {
 		T data = forste.data;
 		forste = forste.neste;
 		antall--;
-		return data;
+		
+		return null;
 	}
 
 	@Override
@@ -88,7 +91,7 @@ public class LenketBag<T> implements BagADT<T> {
 		while(p != null) {
 			if (p.data.equals(entry)) {
 				return p;
-			} 
+			}
 			p = p.neste;
 		}
 		return null;
